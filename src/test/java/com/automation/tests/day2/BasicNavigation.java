@@ -37,14 +37,19 @@ public class BasicNavigation {
         }
         // come back to google
         driver.navigate().back();
+        Thread.sleep(3000);//for demo, wait 3 seconds
 
-
-        driver.close();//to close browser
-        //browser cannot close itself
         verifyEquals(driver.getTitle(), "Google");
+        //move forward in the browser history
+        driver.navigate().forward();
+        Thread.sleep(3000);//for demo, wait 3 seconds
+        System.out.println("Title = " + driver.getTitle());
         //must be at the end
+        driver.getCurrentUrl();
         driver.close();//to close browser
+
         //browser cannot close itself
+
     }
 
     public static void verifyEquals(String arg1, String arg2) {
