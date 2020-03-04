@@ -44,7 +44,16 @@ public class FindElementById {
         System.out.println("href = " + href);
         logout.click();
         Thread.sleep(3000);
-        
+
+        // lets enter invalid credentials
+
+        driver.findElement(By.name("username")).sendKeys("wrong");
+        driver.findElement(By.name("password")).sendKeys("wrong");
+        driver.findElement(By.id("wooden_spoon")).click();
+        Thread.sleep(3000);
+        WebElement errorMessage= driver.findElement(By.id("flash"));
+        System.out.println("errorMessage = " + errorMessage.getText());
+        Thread.sleep(3000);
 
         driver.quit();
     }
