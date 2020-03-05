@@ -2,6 +2,7 @@ package officeHours;
 
 import com.automation.utilities.DriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -22,9 +23,16 @@ public class SeleniumOH2 {
       search.sendKeys("tshirt");
       Thread.sleep(3000);
       search.findElement(By.xpath("//*[@id='searchbox']/button")).click();
-     System.out.println(search.findElement(By.className("alert alert-warning")).getText());
-        search.sendKeys("t-shirt");
-        System.out.println(search.findElement(By.xpath("//*[@id=\"center_column\"]/h1/span[2]")).getText());
+      System.out.println(search.findElement(By.className("alert alert-warning")).getText());
+      search= driver.findElement(By.id("search_query_top"));
+       search.clear();
+       search.sendKeys("t-shirt", Keys.ENTER);
+     String result =search.findElement(By.xpath("//*[@id=\"center_column\"]/h1/span[2]")).getText();
+     if(result.contains("1 result found")){
+         System.out.println("Test passed!");
+     }else{
+         System.out.println("Test failed!!");
+     }
 
 
 
