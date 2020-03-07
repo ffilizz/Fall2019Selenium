@@ -20,9 +20,15 @@ public class TestForiFrame {
         driver.switchTo().frame("mce_0_ifr");
         //now, this content will be visible
         WebElement textInput=driver.findElement(By.id("tinymce"));
-        System.out.println("textInput.getText() = " + textInput.getText());
+        System.out.println("textInput = " + textInput.getText());
+        textInput.clear();
+        BrowserUtils.wait(2);
+        textInput.sendKeys("Hello World!!!");
+        BrowserUtils.wait(2);
         //exit from the frame
         driver.switchTo().defaultContent();
+        WebElement heading = driver.findElement(By.tagName("h3"));
+        System.out.println(heading.getText());
         driver.quit();
     }
 }
