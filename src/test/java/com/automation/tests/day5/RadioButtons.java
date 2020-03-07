@@ -25,7 +25,7 @@ public class RadioButtons {
                 System.out.println("Clicked on : " + id);
                 BrowserUtils.wait(1);
             }else{
-                System.out.println("Button is disabled,not clicked: "+ id);
+                System.out.println(id+ " button is disabled,not clicked!!");
             }
         }
 
