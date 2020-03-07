@@ -22,6 +22,17 @@ public class CheckBoxesTest {
         }else{
             System.out.println("Test FAILED!!");
         }
+        BrowserUtils.wait(2);
+        WebElement checkbox1 = checkBoxes.get(0);
+        checkbox1.click();
+        BrowserUtils.wait(2);
+        if(checkbox1.isSelected()){
+            System.out.println("Test PASSED!");
+            System.out.println("checkbox #1 is selected");
+        } else{
+            System.out.println("Test FAILED!!");
+            System.out.println("checkbox #1 is not selected");
+        }
         BrowserUtils.wait(3);
         driver.quit();
 
