@@ -19,16 +19,8 @@ public class Xpath {
         driver.findElement(By.xpath(loginLocator)).click();
 
 
-
-
-
-
-
-
-
-
-    BrowserUtils.wait(3);
-    driver.quit();
+        BrowserUtils.wait(3);
+        driver.quit();
 
 
     }
