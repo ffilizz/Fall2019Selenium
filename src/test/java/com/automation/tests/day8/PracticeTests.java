@@ -26,8 +26,17 @@ public class PracticeTests {
         Assert.assertEquals(actual,expected,"Sub-header message is not matching!!!");
 
     }
+@Test
+public void forgotPassword(){
+        driver.findElement(By.linkText("Forgot Password")).click();
+        driver.findElement(By.name("email")).sendKeys("aaa@gmail.com");
+        driver.findElement(By.id("form_submit")).click();
+    String expected="Your e-mail's been sent!";
+    String actual=driver.findElement(By.name("confirmation_message")).getText();
+    Assert.assertEquals(actual,expected,"Sub-header message is not matching!!!");
 
 
+}
 
 
     @BeforeMethod
