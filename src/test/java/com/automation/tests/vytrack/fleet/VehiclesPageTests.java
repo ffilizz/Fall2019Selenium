@@ -53,7 +53,6 @@ public class VehiclesPageTests {
     /**
      *
      *     ################ TASK 7 minutes until 3:48
-     *
      *     Given user is on the vytrack landing page
      *     When user logs on as a store manager
      *     Then user navigates to Fleet --> Vehicles
