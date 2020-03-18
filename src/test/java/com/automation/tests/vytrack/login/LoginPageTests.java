@@ -60,7 +60,7 @@ public class LoginPageTests {
         if (driver != null) {
             //close browser, close session
             driver.quit();
-            //destroy webdriver object for sure
+            //destroy WebDriver object for sure
             driver = null;
         }
     }
