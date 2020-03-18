@@ -51,7 +51,7 @@ Login as story manager
 Go to Activities --> Calls
 Verify that Log Call button is displayed
 Go to Activities --> Calendar Events
-Verify that Create Calendar Event button is displayed*/
+Verify that Create Calendar Event button is displayed**/
     @Test
     public void verifyLogCallButton(){
         WebElement logCallBtnElement=driver.findElement(logCallBtnBy);
