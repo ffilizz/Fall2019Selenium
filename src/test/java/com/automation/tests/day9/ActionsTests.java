@@ -61,6 +61,34 @@ public class ActionsTests {
         Assert.assertTrue(imgText1.isDisplayed());
     }
 
+    @Test
+    public void jQueryMenuTest(){
+        driver.get("https://practice-cybertekschool.herokuapp.com/jqueryui/menu");
+        WebElement enabled=driver.findElement(By.id("ui-id-3"));
+        WebElement download=driver.findElement(By.id("ui-id-4"));
+        WebElement pdf=driver.findElement(By.id("ui-id-5"));
+        actions.moveToElement(enabled).pause(1000).
+                moveToElement(download).pause(1000).
+                click(pdf).
+                build().perform();
+
+    }
+    @Test
+    public void dragAndDropTest(){
+
+        driver.get("https://demos.telerik.com/kendo-ui/dragdrop/index");
+        driver.manage().window().maximize();
+        BrowserUtils.wait(3);
+        WebElement earth =driver.findElement(By.id("droptarget"));
+        WebElement moon =driver.findElement(By.id("draggable"));
+        actions.dragAndDrop(moon,earth).perform();
+        String expected ="You did great!";
+        String actual= earth.getText();
+
+        Assert.assertEquals(actual,expected);
+
+    }
+
     @AfterMethod
     public void tearDown() {
         BrowserUtils.wait(3);
