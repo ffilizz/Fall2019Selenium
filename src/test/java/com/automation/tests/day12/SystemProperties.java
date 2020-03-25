@@ -20,6 +20,6 @@ public class SystemProperties {
 
         System.out.println(System.getProperty("os.arch"));
 
-        //https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
+        ///https://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
     }
 }

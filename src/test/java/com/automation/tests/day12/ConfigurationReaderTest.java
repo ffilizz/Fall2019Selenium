@@ -9,6 +9,7 @@ public class ConfigurationReaderTest {
     public void readProperties(){
         String browser = ConfigurationReader.getProperty("browser");
         System.out.println(browser);
+        //
     }
 }
 
