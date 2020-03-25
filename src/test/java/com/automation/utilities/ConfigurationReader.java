@@ -24,7 +24,7 @@ public class ConfigurationReader {
 
     }
 
-    /**
+    /***
      * This method returns property value from configuration.properties file
      * @param keyName property name
      * @return property value
